@@ -1,3 +1,36 @@
 .o-container {
     z-index: 10;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* Responsive max-widths matching Bootstrap 5 container breakpoints */
+@media (min-width: 576px) {
+    .o-container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .o-container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .o-container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .o-container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .o-container {
+        max-width: 1320px;
+    }
 }
