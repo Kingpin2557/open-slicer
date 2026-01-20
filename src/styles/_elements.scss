@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+
+    width: 100%;
+    height: 100vh;
+
+    & > * {
+        grid-area: 1/1;
+    }
+}
