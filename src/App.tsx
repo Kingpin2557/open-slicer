@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import Icons from "./components/Icons";
+import Icons from "./components/Icon";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Icons type="cog" size={100} />
       </div>
       <Canvas>
-        <color attach="background" args={["#0ea5a4"]} />
+        <color attach="background" args={["transparant"]} />
       </Canvas>
     </main>
   );
