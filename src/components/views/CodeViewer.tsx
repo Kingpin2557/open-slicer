@@ -1,7 +1,7 @@
 export function CodeViewer() {
   return (
-    <div className="code-viewer">
-      <h2>Code Viewer Component</h2>
+    <div>
+      <p>Code Viewer Component</p>
       {/* Code viewer implementation goes here */}
     </div>
   );
