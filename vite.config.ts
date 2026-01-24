@@ -3,6 +3,7 @@ import { resolve } from "path"; // Added missing import
 import react from "@vitejs/plugin-react";
 import autoprefixer from "autoprefixer";
 import Sitemap from "vite-plugin-sitemap";
+const outDir = resolve(__dirname, "dist");
 
 export default defineConfig({
   root: resolve(__dirname, "src"),
@@ -12,6 +13,7 @@ export default defineConfig({
     Sitemap({
       hostname: "http://localhost:8080/", // Use production URL for SEO
       generateRobotsTxt: true,
+      outDir: outDir,
       robots: [
         {
           userAgent: "*",
