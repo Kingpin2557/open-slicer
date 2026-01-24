@@ -4,6 +4,7 @@ import IconField from "./components/IconField";
 import Toolbar from "./components/Toolbar";
 import Button from "./components/Button";
 import Slider from "rc-slider";
+import { ProjectView, CodeViewer, Tabs } from "./components/views";
 import "rc-slider/assets/index.css";
 
 import { useMove, useRotate, useScale } from "./hooks/dimensions/transforms";
@@ -11,6 +12,11 @@ import { useExtends, useSelection, useSubtract } from "./hooks/edits/edit";
 
 function App() {
   const [value, setValue] = useState(50);
+
+  const myTabs = [
+    { id: "project", label: "Project", Component: ProjectView },
+    { id: "gcode", label: "G-Code", Component: CodeViewer },
+  ];
 
   const sliderStyles = {
     handle: {
@@ -64,14 +70,7 @@ function App() {
           </div>
 
           <div className="o-sidebar">
-            <div
-              style={{
-                backgroundColor: "white",
-                height: "200px",
-                width: " 100%",
-                borderRadius: "calc(var(--border-radius) / 2)",
-              }}
-            ></div>
+            <Tabs items={myTabs} />
             <Button
               label="Slice now!"
               event={() => console.log("Clicking Button")}
