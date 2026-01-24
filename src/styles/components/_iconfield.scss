@@ -2,4 +2,15 @@
     padding: 10px;
     height: fit-content;
     border: none;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: 0.5px solid var(--border-color);
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+        transition: 0.3s all ease-in-out;
+        cursor: pointer;
+        background-color: var(--hover-color);
+        border: 0.5px solid transparent;
+    }
 }

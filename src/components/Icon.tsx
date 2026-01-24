@@ -8,8 +8,6 @@ import {
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 function Icons({ type, size }: { type: string; size: number }) {
-  console.log(type);
-
   const icons: Record<
     string,
     React.ComponentType<React.SVGProps<SVGSVGElement>>

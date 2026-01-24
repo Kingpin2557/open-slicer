@@ -5,8 +5,8 @@ function App() {
   return (
     <main>
       <div className="o-container">
-        <p>Hello World!</p>
         <IconField type="cog" size={20} />
+        <p>Hello World!</p>
       </div>
       <Canvas>
         <color attach="background" args={["transparant"]} />
