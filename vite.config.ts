@@ -6,9 +6,8 @@ import Sitemap from "vite-plugin-sitemap";
 export default defineConfig({
   plugins: [
     react(),
-    // Sitemap must be inside the plugins array
     Sitemap({
-      hostname: "https://open-slicer.netlify.app/", // Use production URL for SEO
+      hostname: "https://open-slicer.netlify.app/",
       generateRobotsTxt: true,
       robots: [
         {
