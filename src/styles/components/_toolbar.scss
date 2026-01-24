@@ -1,0 +1,14 @@
+.c-toolbar {
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    &--row {
+        flex-direction: row;
+    }
+}

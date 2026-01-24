@@ -6,8 +6,9 @@ type Icon = {
 };
 
 function IconField({ type, size }: Icon) {
+  console.log(type);
   return (
-    <button className="c-icon">
+    <button className="c-icon" aria-label={type}>
       <Icon type={type} size={size} />
     </button>
   );
