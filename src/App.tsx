@@ -1,12 +1,34 @@
+import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import IconField from "./components/IconField";
 import Toolbar from "./components/Toolbar";
 import Button from "./components/Button";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 import { useMove, useRotate, useScale } from "./hooks/dimensions/transforms";
 import { useExtends, useSelection, useSubtract } from "./hooks/edits/edit";
 
 function App() {
+  const [value, setValue] = useState(50);
+
+  const handleStyle = {
+    borderColor: "#007bff",
+    height: 20,
+    width: 20,
+    marginLeft: -8,
+    backgroundColor: "#fff",
+  };
+
+  const trackStyle = { backgroundColor: "#007bff" };
+
+  function handleSliderChange(val: number | number[]) {
+    if (typeof val === "number") {
+      setValue(val);
+    }
+  }
+
+  console.log("Rendering App with slider value:", value);
   return (
     <main>
       <div className="o-container">
@@ -24,6 +46,15 @@ function App() {
         </div>
 
         <div className="o-viewer">
+          <Slider
+            vertical
+            min={0}
+            max={100}
+            value={value}
+            onChange={handleSliderChange}
+            trackStyle={trackStyle}
+            handleStyle={handleStyle}
+          />
           <Button label="Export" event={() => console.log("Clicking Button")} />
         </div>
       </div>
