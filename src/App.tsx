@@ -1,15 +1,10 @@
 import { Canvas } from "@react-three/fiber";
 import IconField from "./components/IconField";
 import Toolbar from "./components/Toolbar";
-import {
-  useExtends,
-  useMove,
-  useRotate,
-  useSelection,
-  useSubtract,
-  useScale,
-} from "./hooks/index";
 import Button from "./components/Button";
+
+import { useMove, useRotate, useScale } from "./hooks/dimensions/transforms";
+import { useExtends, useSelection, useSubtract } from "./hooks/edits/edit";
 
 function App() {
   return (
