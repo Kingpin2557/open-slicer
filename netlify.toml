@@ -1,0 +1,20 @@
+[build]
+  # This tells Netlify what command to run
+  command = "npm run build"
+
+  # This tells Netlify where the build output is
+  publish = "dist"
+
+[dev]
+  # Matches your Vite server port
+  port = 8080
+  # Tells Netlify CLI where your Vite dev server is running
+  targetPort = 8080
+  # Ensures Netlify Dev knows the base of your source code
+  base = "src"
+
+[[redirects]]
+  # Essential for React SPAs: redirects all requests to index.html
+  from = "/*"
+  status = 200
+  to = "/index.html"
