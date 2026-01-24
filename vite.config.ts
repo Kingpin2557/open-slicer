@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     // Sitemap must be inside the plugins array
     Sitemap({
-      hostname: "http://localhost:8080/", // Use production URL for SEO
+      hostname: "https://open-slicer.netlify.app/", // Use production URL for SEO
       generateRobotsTxt: true,
       robots: [
         {
