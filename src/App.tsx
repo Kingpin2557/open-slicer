@@ -12,15 +12,21 @@ import { useExtends, useSelection, useSubtract } from "./hooks/edits/edit";
 function App() {
   const [value, setValue] = useState(50);
 
-  const handleStyle = {
-    borderColor: "#007bff",
-    height: 20,
-    width: 20,
-    marginLeft: -8,
-    backgroundColor: "#fff",
+  const sliderStyles = {
+    handle: {
+      borderColor: "var(--primary-color)",
+      height: 20,
+      width: 20,
+      marginLeft: -8,
+      backgroundColor: "var(--primary-color)",
+    },
+    rail: {
+      backgroundColor: "var(--secondary-color)",
+    },
+    track: {
+      backgroundColor: "var(--primary-color)",
+    },
   };
-
-  const trackStyle = { backgroundColor: "#007bff" };
 
   function handleSliderChange(val: number | number[]) {
     if (typeof val === "number") {
@@ -46,20 +52,35 @@ function App() {
         </div>
 
         <div className="o-viewer">
-          <Slider
-            vertical
-            min={0}
-            max={100}
-            value={value}
-            onChange={handleSliderChange}
-            trackStyle={trackStyle}
-            handleStyle={handleStyle}
-          />
-          <Button label="Export" event={() => console.log("Clicking Button")} />
+          <div className="o-slider">
+            <Slider
+              vertical
+              min={0}
+              max={100}
+              value={value}
+              onChange={handleSliderChange}
+              styles={sliderStyles}
+            />
+          </div>
+
+          <div className="o-sidebar">
+            <div
+              style={{
+                backgroundColor: "white",
+                height: "200px",
+                width: " 100%",
+                borderRadius: "calc(var(--border-radius) / 2)",
+              }}
+            ></div>
+            <Button
+              label="Slice now!"
+              event={() => console.log("Clicking Button")}
+            />
+          </div>
         </div>
       </div>
       <Canvas>
-        <color attach="background" args={["transparant"]} />
+        <color attach="background" args={["grey"]} />
       </Canvas>
     </main>
   );

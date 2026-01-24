@@ -1,6 +1,7 @@
 .o-container {
     z-index: 10;
     width: 100%;
+    height: 90%;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;
@@ -8,7 +9,7 @@
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 /* Responsive max-widths matching Bootstrap 5 container breakpoints */
