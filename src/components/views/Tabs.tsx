@@ -15,15 +15,15 @@ function Tabs({ items }: TabsProps) {
   const [activeTab, setActiveTab] = useState(items[0]?.id);
 
   return (
-    <div className="c-tabs-container">
-      <div className="c-tabs">
+    <div className="c-tabs">
+      <div className="c-tabs__header">
         {items.map((item) => (
           <button
             key={item.id}
             className={`c-tabs__tab ${activeTab === item.id ? "c-tabs__tab--active" : ""}`}
             onClick={() => setActiveTab(item.id)}
           >
-            {item.label}
+            <h3> {item.label}</h3>
           </button>
         ))}
       </div>
