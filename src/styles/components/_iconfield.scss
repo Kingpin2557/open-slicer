@@ -7,6 +7,11 @@
     border: 0.5px solid var(--border-color);
     transition: 0.3s all ease-in-out;
 
+    &--active {
+        background-color: var(--active-color);
+        border: 0.5px solid transparent;
+    }
+
     &:hover {
         transition: 0.3s all ease-in-out;
         cursor: pointer;

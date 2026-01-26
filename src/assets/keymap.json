@@ -1,36 +1,50 @@
 {
-  "dimension_position": [
+  "toolbars": [
     {
-      "hookName": "useMove",
-      "shortcut": "m",
-      "description": "Move tool"
+      "isRow": false,
+      "items": [
+        {
+          "hookName": "useMove",
+          "shortcut": "g",
+          "description": "Move tool",
+          "type": "move"
+        },
+        {
+          "hookName": "useScale",
+          "shortcut": "s",
+          "description": "Scale tool",
+          "type": "scale"
+        },
+        {
+          "hookName": "useRotate",
+          "shortcut": "r",
+          "description": "Rotate tool",
+          "type": "rotate"
+        }
+      ]
     },
     {
-      "hookName": "useScale",
-      "shortcut": "s",
-      "description": "Scale tool"
-    },
-    {
-      "hookName": "useRotate",
-      "shortcut": "r",
-      "description": "Rotate tool"
-    }
-  ],
-  "model_editing": [
-    {
-      "hookName": "useExtends",
-      "shortcut": "e",
-      "description": "Extend tool"
-    },
-    {
-      "hookName": "useSubtract",
-      "shortcut": "b",
-      "description": "Subtract tool"
-    },
-    {
-      "hookName": "useSelection",
-      "shortcut": "c",
-      "description": "Selection tool"
+      "isRow": false,
+      "items": [
+        {
+          "hookName": "useExtends",
+          "shortcut": "ctrl+e",
+          "description": "Extend tool",
+          "type": "extend"
+        },
+        {
+          "hookName": "useSubtract",
+          "shortcut": "ctrl+s",
+          "description": "Subtract tool",
+          "type": "subtract"
+        },
+        {
+          "hookName": "useSelection",
+          "shortcut": "ctrl+l",
+          "description": "Selection tool",
+          "type": "selection"
+        }
+      ]
     }
   ]
 }
