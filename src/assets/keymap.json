@@ -1,0 +1,36 @@
+{
+  "dimension_position": [
+    {
+      "hookName": "useMove",
+      "shortcut": "m",
+      "description": "Move tool"
+    },
+    {
+      "hookName": "useScale",
+      "shortcut": "s",
+      "description": "Scale tool"
+    },
+    {
+      "hookName": "useRotate",
+      "shortcut": "r",
+      "description": "Rotate tool"
+    }
+  ],
+  "model_editing": [
+    {
+      "hookName": "useExtends",
+      "shortcut": "e",
+      "description": "Extend tool"
+    },
+    {
+      "hookName": "useSubtract",
+      "shortcut": "b",
+      "description": "Subtract tool"
+    },
+    {
+      "hookName": "useSelection",
+      "shortcut": "c",
+      "description": "Selection tool"
+    }
+  ]
+}
