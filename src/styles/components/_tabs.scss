@@ -19,10 +19,18 @@ $background: var(--secondary-color);
         background-color: transparent;
         border: transparent;
 
+        cursor: pointer;
+
         &--active {
             background-color: $background;
             border-bottom: 3px solid var(--accent-color);
             color: var(--text-black);
+
+            cursor: default;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
